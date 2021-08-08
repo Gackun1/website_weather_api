@@ -1,0 +1,36 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+.primary-btn {
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  color: white;
+  border-radius: 0.3rem;
+  border: none;
+  background: rgb(28, 184, 65);
+}
+
+.serch-area {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.serch-area input {
+  font-size: 1.8rem;
+  border: none;
+  background: rgb(248, 248, 248);
+}
+
+.ml-20 {
+  margin-left: 2rem;
+}
+
+.mb-20 {
+  margin-bottom: 2rem;
+}
+
+#app {
+  font-size: 1.6rem;
+}
