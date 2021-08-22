@@ -2,13 +2,40 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .primary-btn {
-  font-size: 1.8rem;
   padding: 1rem 3rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
   color: white;
+  white-space: nowrap;
   border-radius: 0.3rem;
   border: none;
   background: rgb(28, 184, 65);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.primary-btn:hover {
+  opacity: 0.7;
+}
+
+.message-area{
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.err-message {
+  color: #f00;
 }
 
 .serch-area {
@@ -18,6 +45,10 @@ html {
 }
 
 .serch-area input {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.3rem;
+  box-sizing: border-box;
   font-size: 1.8rem;
   border: none;
   background: rgb(248, 248, 248);
@@ -27,10 +58,140 @@ html {
   margin-left: 2rem;
 }
 
+.mt-80 {
+  margin-top: 8rem;
+}
+
+.mb-10 {
+  margin-bottom: 1rem;
+}
+
 .mb-20 {
   margin-bottom: 2rem;
 }
 
-#app {
+.header {
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+}
+
+.header .inner {
+  padding: 2rem;
+}
+
+.footer {
+  background: #333;
+}
+
+.footer .inner {
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer .inner .copy {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.main .inner {
+  max-width: 720px;
+  padding: 5rem 1rem;
+  margin: 0 auto;
   font-size: 1.6rem;
+}
+
+.table-ttl {
+  padding: 2rem;
+  background: #5fb7f9;
+  border-radius: 2rem 2rem 0 0;
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+table, thead, tbody, tr, th, td {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+}
+
+table tr {
+  display: flex;
+  border-bottom: solid 1px #eee;
+  align-items: center;
+  justify-content: center;
+}
+
+table tr:hover {
+  background-color: #d4f0fd;
+}
+
+table th,
+table td {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+table td img {
+  width: 6rem;
+  object-fit: cover;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.show {
+  opacity:1;
+  animation: fadein 1s ease-in-out;
+}
+
+@keyframes fadein {
+  0% { opacity:0 }
+  100% { opacity:1 }
+}
+
+
+.square-arrow {
+  display: block;
+  position: sticky;
+  cursor: pointer;
+  bottom: 1rem;
+  margin: 1rem 1rem 1rem auto;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 10rem;
+  background: #FF8C00;
+  box-shadow: -6px -6px 9px 0px white, 6px 6px 9px rgb(0 0 0 / 40%);
+}
+
+.square-arrow:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 1.25rem 2.5rem 1.25rem;
+  border-color: transparent transparent #ffffff transparent;
+  top: 20%;
+  left: 25%;
+}
+
+.sp-br {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .sp-br {
+    display: block;
+  }
+
+  .serch-area {
+    flex-direction: column;
+  }
+
+  .serch-area .primary-btn {
+    margin: 2rem 0 0 0;
+  }
 }

@@ -8,63 +8,93 @@
     <title>Document</title>
   </head>
   <body>
-    <main>
-      <div class="serch-area mb-20">
-        <input id="serch-form" type="text" placeholder="東京都" />
-        <button id="serch-btn" class="primary-btn ml-20">天気を調べる</button>
+    <header class="header mb-20">
+      <div class="inner">
+        <h1 class="ttl">１週間の天気</h1>
       </div>
+    </header>
+    <main class="main">
+      <div class="inner">
+        <div class="serch-area mb-10">
+          <input id="serch-form" type="text" placeholder="東京都" />
+          <button id="serch-btn" class="primary-btn ml-20">天気を調べる</button>
+        </div>
+        <div id="message" class="message-area mb-10"></div>
 
-      <div id="app">
-        <table>
-          <thead>
-            <tr>
-              <th colspan="2"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="2"></td>
-            </tr>
-            <tr>
-              <th>天気</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>気象情報</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>現在の気温</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>最低気温</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>最高気温</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>湿度</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>気圧</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>日の入</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>日の出</th>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
+        <div id="app">
+          <table id="today">
+            <thead>
+              <tr>
+                <th colspan="2" class="table-ttl"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>日時</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>天気</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>気象情報</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>現在の気温</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>最低気温</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>最高気温</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>湿度</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>気圧</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>日の入</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>日の出</th>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <table id="week" class="mt-80">
+            <thead>
+              <tr>
+                <th colspan="5" class="table-ttl">３時間おきの天気</th>
+              </tr>
+              <tr>
+                <th>日時</th>
+                <th>天気</th>
+                <th>気象<br class="sp-br">情報</th>
+                <th>最高<br class="sp-br">気温</th>
+                <th>最低<br class="sp-br">気温</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
       </div>
     </main>
-    <script src="js/script.js"></script>
+    <a id="to-top" class="square-arrow"></a>
+    <footer class="footer">
+      <div class="inner">
+        <small class="copy">&copy; 2021 yoshikawa gaku</small>
+      </div>
+    </footer>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>
